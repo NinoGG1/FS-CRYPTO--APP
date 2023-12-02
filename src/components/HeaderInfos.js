@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import PercentChange from "./PercentChange";
+import TableFilters from "./TableFilters";
 
 const HeaderInfos = () => {
   const [headerData, setHeaderData] = useState(null);
@@ -56,6 +57,7 @@ const HeaderInfos = () => {
             "Chargement..."}
         </li>
       </ul>
+      <TableFilters />
     </div>
   );
 };
