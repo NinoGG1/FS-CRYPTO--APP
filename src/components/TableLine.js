@@ -1,16 +1,21 @@
 import React from "react";
+import PercentChange from "./PercentChange";
 
 const TableLine = ({ coin, index }) => {
+  const formatNumber = (number) => {
+    return new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 }).format(
+      number
+    );
+  };
+
   const priceFormater = (price) => {
     if (Math.round(price).toString().length < 4) {
-      return new Intl.NumberFormat("en-US", {
+      return new Intl.NumberFormat("fr-FR", {
         minimumFractionDigits: 2,
         maximumFractionDigits: 8,
       }).format(price);
     } else {
-      return new Intl.NumberFormat("en-US", {
-        maximumFractionDigits: 0,
-      }).format(price);
+      return formatNumber(price);
     }
   };
 
@@ -42,7 +47,19 @@ const TableLine = ({ coin, index }) => {
           </a>
         </div>
       </div>
-      <p>{priceFormater(coin.current_price)} $</p>
+      <p className="number-spacing">{priceFormater(coin.current_price)} $</p>
+      <p className="mktcap number-spacing">{formatNumber(coin.market_cap)} $</p>
+      <p className="volume number-spacing">
+        {formatNumber(coin.total_volume).toLocaleString()} $
+      </p>
+      <PercentChange percent={coin.price_change_percentage_1h_in_currency} />
+      <PercentChange percent={coin.price_change_percentage_24h_in_currency} />
+      <PercentChange percent={coin.price_change_percentage_7d_in_currency} />
+      <PercentChange percent={coin.price_change_percentage_30d_in_currency} />
+      <PercentChange percent={coin.price_change_percentage_200d_in_currency} />
+      <PercentChange percent={coin.price_change_percentage_1y_in_currency} />
+      <PercentChange percent={coin.ath_change_percentage} />
+      {/* <p className="number-spacing">{priceFormater(coin.ath)} $</p> */}
     </div>
   );
 };
