@@ -1,0 +1,52 @@
+/* NewTransaction.css */
+
+.new-transaction-form {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.322);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-group {
+  flex: 0 0 calc(33.333% - 20px); /* Trois colonnes avec un peu d'espace entre elles */
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  color: #00b7b3; /* Utilisez vos variables de couleur SCSS ici */
+}
+
+.form-control, .now-button, .submit-button {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.now-button {
+  background-color: #008CBA;
+  color: white;
+  cursor: pointer;
+  margin-top: auto; /* Aligner le bouton 'Now' en bas du groupe */
+}
+
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.center-button {
+  flex-basis: 100%; /* Assurez-vous que le bouton de soumission s'étend sur toute la largeur */
+  display: flex;
+  justify-content: center;
+}

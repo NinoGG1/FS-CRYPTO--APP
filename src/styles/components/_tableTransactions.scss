@@ -1,0 +1,76 @@
+.table-container-tr {
+    text-align: center;
+    color: $white1 !important;
+  
+    .table-header-tr,
+    .table-line-tr {
+      display: grid;
+      grid-template-columns: 308px 100px 150px 120px repeat(7, 1fr);
+  
+      @media screen and (max-width: 1020px) {
+        grid-template-columns: 276px 80px 100px 100px repeat(7, 1fr);
+      }
+      @media screen and (max-width: 850px) {
+        grid-template-columns: 276px 80px 100px 100px repeat(4, 1fr);
+      }
+      @media screen and (max-width: 715px) {
+        grid-template-columns: 220px 100px repeat(4, 1fr);
+      }
+      @media screen and (max-width: 540px) {
+        grid-template-columns: 170px 80px repeat(4, 1fr);
+      }
+    }
+    .table-header-tr {
+      height: 44px;
+      align-items: center;
+      width: 100%;
+      z-index: 100000;
+      transition: 0;
+  
+      &.active {
+        position: fixed;
+        max-width: 1200px;
+        top: 0;
+        background: rgba(52, 52, 52, 0.8);
+        backdrop-filter: blur(2px);
+        opacity: 0;
+        top: -10px;
+        animation: navAnim 0.3s forwards;
+        border-bottom: 1px solid rgb(77, 77, 77);
+  
+        @keyframes navAnim {
+          to {
+            opacity: 1;
+            top: 0;
+          }
+        }
+  
+        .top {
+          visibility: visible !important;
+        }
+      }}
+    
+    .table-line-tr {
+        min-height: 40px;
+        align-items: center;
+        border-top: 1px solid rgb(73, 73, 73);
+        position: relative;
+        color: $white1;
+        transition: 0.15s;
+        display: grid;
+        grid-template-columns: 308px 100px 150px 120px repeat(7, 1fr);
+      
+        @media screen and (max-width: 1020px) {
+          grid-template-columns: 276px 80px 100px 100px repeat(7, 1fr);
+        }
+        @media screen and (max-width: 850px) {
+          grid-template-columns: 276px 80px 100px 100px repeat(4, 1fr);
+        }
+        @media screen and (max-width: 715px) {
+          grid-template-columns: 220px 100px repeat(4, 1fr);
+        }
+        @media screen and (max-width: 540px) {
+          grid-template-columns: 170px 80px repeat(4, 1fr);
+        }}
+    
+}

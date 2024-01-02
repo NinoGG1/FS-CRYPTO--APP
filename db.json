@@ -1,0 +1,44 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "date": "2023-06-15T10:00:00Z",
+      "transactionType": "Achat",
+      "crypto": "bitcoin",
+      "quantity": 0.01,
+      "unitPriceUSD": 30000,
+      "totalUSD": 300,
+      "wallet": "Binance"
+    },
+    {
+      "id": 2,
+      "date": "2023-06-16T15:30:00Z",
+      "transactionType": "Achat",
+      "crypto": "bitcoin",
+      "quantity": 0.005,
+      "unitPriceUSD": 31000,
+      "totalUSD": 155,
+      "wallet": "Binance"
+    },
+    {
+      "id": 3,
+      "date": "2023-06-18T12:45:00Z",
+      "transactionType": "Vente",
+      "crypto": "bitcoin",
+      "quantity": 0.008,
+      "unitPriceUSD": 32000,
+      "totalUSD": 256,
+      "wallet": "Binance"
+    },
+    {
+      "id": 4,
+      "date": "2023-06-18T12:30:00Z",
+      "transactionType": "Achat",
+      "crypto": "ethereum",
+      "quantity": 0.5,
+      "unitPriceUSD": 1000,
+      "totalUSD": 500,
+      "wallet": "Binance"
+    }
+  ]
+}
